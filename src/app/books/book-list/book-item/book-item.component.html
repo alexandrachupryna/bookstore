@@ -1,0 +1,30 @@
+<div class="book-item text-center">
+  <div class="book-item__top">
+    <div class="book-item__wrapper">
+      <a class="book-item__image" [routerLink]="[book.id]">
+        <img [src]="book.imagePath" alt="">
+      </a>
+    </div>
+    <h4 class="book-item__name" [routerLink]="[book.id]">{{ book.name }}</h4>
+    <p class="book-item__author">{{ book.author }}</p>
+  </div>
+  <div class="book-item__bottom">
+    <div class="book-item__row">
+      <div class="dropdown" appDropdown>
+        <button class="btn book-item__button dropdown-toggle" type="button" data-toggle="dropdown">{{ selectedFormat }}
+        <span class="caret" *ngIf="book.format.length > 1"></span>
+      </button>
+        <ul class="dropdown-menu" *ngIf="book.format.length > 1">
+          <li *ngFor="let formatType of book.format">
+            <a *ngIf="formatType !== selectedFormat" (click)="selectBookFormat(formatType)">{{ formatType }}</a>
+          </li>
+        </ul>
+      </div>
+      <span class="book-item__price" *ngIf="selectedPrice">$ {{selectedPrice}}</span>
+    </div>
+    <div class="book-item__row">
+      <button class="btn book-item__button" (click)="onAdded()">Add</button>
+      <button class="btn book-item__button" (click)="onBought()">Buy</button>
+    </div>
+  </div>
+</div>

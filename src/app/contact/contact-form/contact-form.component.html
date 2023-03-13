@@ -1,0 +1,37 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div formGroupName="contactData">
+    <div class="row">
+      <div class="col-sm-6 form-group">
+        <input type="text" id="first-name" placeholder="First name" formControlName="firstName" class="form-control">
+      </div>
+      <div class="col-sm-6 form-group">
+        <input type="text" id="surname" placeholder="Surname" formControlName="surname" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 form-group">
+        <input type="tel" id="phone" placeholder="Phone number" formControlName="phone" class="form-control">
+      </div>
+      <div class="col-sm-6 form-group">
+        <input type="text" id="email" placeholder="Email" formControlName="email" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <textarea name="" id="comment" placeholder="Comment" cols="30" rows="10" formControlName="comment" class="form-control"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <input type="checkbox" id="subscribe" name="subscribe" formControlName="subscribe">
+      <label for="subscribe">Keep me up to date with news and offers from time to time by email</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <button class="btn" type="submit" [disabled]="!contactForm.valid">Send Message</button>
+    </div>
+  </div>
+</form>
+<app-alert (isAlertOpen)="toggleAlert(false)" [message]="messageAlert" *ngIf="isAlertDisplayed"></app-alert>

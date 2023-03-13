@@ -1,0 +1,12 @@
+<p class="cart-order-info">
+  <span class="cart-order-info__left">{{cartAmount}} <span *ngIf="cartAmount === 1; else multiple">item</span><ng-template #multiple>items</ng-template>:</span>
+  <span class="cart-order-info__right">$ {{ cartPrice | number : '1.2-2' }}</span>
+</p>
+<p class="cart-order-info">
+  <span class="cart-order-info__left">Delivery:</span>
+  <span class="cart-order-info__right">$ {{ deliveryPrice | number : '1.2-2' }}</span>
+</p>
+<p class="cart-order-info">
+  <span class="cart-order-info__left">Total sum:</span>
+  <span class="cart-order-info__right">$ {{ totalPrice | number : '1.2-2' }}</span>
+</p>

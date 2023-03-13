@@ -1,0 +1,16 @@
+app-cart-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.popup-cart-list {
+  max-height: 50vh;
+  overflow: scroll;
+  padding: 15px;
+}
+
+@media screen and (max-width: 550px) {
+  .app-cart-item {
+    margin-bottom: 10px;
+  }
+}

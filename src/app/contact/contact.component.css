@@ -1,0 +1,15 @@
+.contact {
+  display: flex;
+}
+
+@media screen and (max-width: 766px) {
+  .contact {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .contact {
+    margin: 0 -15px;
+  }
+}

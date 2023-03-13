@@ -1,0 +1,49 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(27, 55, 100, 0.8);
+  z-index: 50;
+}
+
+.alert-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  max-width: 400px;
+  padding: 16px;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.alert-box-actions {
+  text-align: right;
+}
+
+p {
+  font-family: 'Inter-Regular';
+  font-size: 17px;
+  line-height: 180%;
+  letter-spacing: -0.01em;
+  color: #969AA0;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px;
+  background: #FFCA42;
+  font-family: 'Cardo-Bold';
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  color: #1B3764;
+  border: none;
+}
+
+.btn:focus {
+  outline: none;
+}

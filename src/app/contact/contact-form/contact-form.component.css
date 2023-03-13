@@ -1,0 +1,54 @@
+.btn {
+  padding: 20px;
+  width: 100%;
+  background: #FFCA42;
+  font-family: 'Cardo-Bold';
+  font-size: 19px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  color: #1B3764;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.form-control {
+  border: 1px solid #DCE1E9;
+  padding: 15px 20px;
+  font-family: 'Inter-Regular';
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  color: #969AA0;
+  min-height: 20px;
+  height: auto;
+}
+
+input[type=checkbox] {
+  margin-right: 10px;
+}
+
+label {
+  font-family: 'Inter-Regular';
+  font-size: 17px;
+  line-height: 180%;
+  letter-spacing: -0.01em;
+  color: #969AA0;
+}
+
+
+@media screen and (max-width: 550px) {
+  .form-group {
+    display: flex;
+    align-items: baseline;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  .form-control {
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+}

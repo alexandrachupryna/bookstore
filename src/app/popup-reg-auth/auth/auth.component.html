@@ -1,0 +1,21 @@
+<div class="spinner" *ngIf="isLoading">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+<form [formGroup]="authForm" (ngSubmit)="onSubmit(authForm)">
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <input type="text" id="authEmail" placeholder="Email" formControlName="email" class="form-control" autocomplete="on">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <input type="password" id="password" placeholder="Password" formControlName="password" class="form-control" autocomplete="on">
+    </div>
+  </div>
+  <p *ngIf="error" class="auth-error">{{ error }}</p>
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <button type="submit" class="btn" [disabled]="!authForm.valid">Log in</button>
+    </div>
+  </div>
+</form>

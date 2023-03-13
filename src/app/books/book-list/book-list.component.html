@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="book-filter__wrapper">
+    <button class="btn book-filter btn-filter" [class.btn-filter__active]="isBestsellerFilter" (click)="toggleBestsellerFilter()">Bestsellers</button>
+    <button class="btn book-filter btn-filter" [class.btn-filter__active]="isNewFilter" (click)="toggleNewFilter()">New</button>
+    <div class="dropdown book-filter" appDropdown>
+      <button class="btn btn-filter dropdown-toggle" [class.btn-filter__active]="categoryFilter !== 'All categories'" type="button" data-toggle="dropdown">{{ categoryFilter }}
+      <span class="caret"></span>
+    </button>
+      <ul class="dropdown-menu">
+        <li *ngFor="let category of bookCategoryList">
+          <a *ngIf="category !== categoryFilter" (click)="filterBookCategories(category)">{{ category }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown book-filter" appDropdown>
+      <button class="btn btn-filter dropdown-toggle" [class.btn-filter__active]="formatFilter !== 'All formats'" type="button" data-toggle="dropdown">{{ formatFilter }}
+      <span class="caret"></span>
+    </button>
+      <ul class="dropdown-menu">
+        <li *ngFor="let format of formatList">
+          <a *ngIf="format !== formatFilter" (click)="filterBookFormat(format)">{{ format }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="book-list">
+    <app-book-item *ngFor="let bookEl of books| filterBooks:isBestsellerFilter:isNewFilter:categoryFilter:formatFilter:displayedBookAmount" [book]="bookEl"></app-book-item>
+  </div>
+</div>
+<div class="row">
+  <button *ngIf="books.length > displayedBookAmount" (click)="showMoreBooks()" class="btn btn-pagination">Show more books</button>
+</div>

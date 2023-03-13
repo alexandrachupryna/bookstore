@@ -1,0 +1,46 @@
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.form-control {
+  border: 1px solid #DCE1E9;
+  padding: 15px 20px;
+  font-family: 'Inter-Regular';
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  color: #969AA0;
+  min-height: 20px;
+  height: auto;
+}
+
+.btn {
+  padding: 20px;
+  width: 100%;
+  background: #FFCA42;
+  font-family: 'Cardo-Bold';
+  font-size: 19px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  color: #1B3764;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.registration-error {
+  font-family: 'Inter-Regular';
+  font-size: 19px;
+  color: red;
+  text-align: center;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

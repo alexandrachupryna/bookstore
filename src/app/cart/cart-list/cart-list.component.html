@@ -1,0 +1,3 @@
+<div class="row" [class.popup-cart-list]="isPopup">
+  <app-cart-item *ngFor="let cartEl of carts; let i = index" [cart]="cartEl"></app-cart-item>
+</div>

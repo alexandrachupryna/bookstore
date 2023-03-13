@@ -1,0 +1,20 @@
+<div class="overlay" *ngIf="isPopupOpen">
+  <div class="backdrop"></div>
+  <div class="popup">
+    <div class="popup-header">
+      <h2>Your Cart</h2>
+      <a class="close" (click)="closePopup()">&times;</a>
+    </div>
+    <div class="content">
+      <app-cart-list [isPopup]="true"></app-cart-list>
+      <hr>
+      <p class="cart-order-info">
+        <span class="cart-order-info__left">Sub-total:</span>
+        <span class="cart-order-info__right">{{cartPrice | number : '1.2-2' }}</span>
+      </p>
+      <button class="btn" (click)="onContinue()">
+        Continue to Checkout
+      </button>
+    </div>
+  </div>
+</div>

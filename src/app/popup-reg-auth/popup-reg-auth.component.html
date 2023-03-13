@@ -1,0 +1,24 @@
+<div class="overlay" *ngIf="isPopupOpen">
+  <div class="backdrop"></div>
+  <div class="popup">
+    <div class="popup-reg-auth-header">
+      <h2 [textContent]="isLoginForm ? 'Log in' : 'Sign up'"></h2>
+      <a class="close" (click)="closePopup()">&times;</a>
+    </div>
+    <div class="content">
+      <div class="login" *ngIf="isLoginForm; else registration">
+        <app-auth></app-auth>
+        <p>Do not have an account?</p>
+        <button class="btn" (click)="switchForm(false)">
+          Switch to sign up form
+        </button>
+      </div>
+      <ng-template #registration>
+        <app-registration></app-registration>
+        <button class="btn" (click)="switchForm(true)">
+          Switch to log in form
+        </button>
+      </ng-template>
+    </div>
+  </div>
+</div>

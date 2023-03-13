@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Cardo-Regular';
+  src: url('../assets/fonts/Cardo/Cardo-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Cardo-Bold';
+  src: url('../assets/fonts/Cardo/Cardo-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Cardo-Italic';
+  src: url('../assets/fonts/Cardo/Cardo-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url('../assets/fonts/Inter/static/Inter-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Inter-Medium';
+  src: url('../assets/fonts/Inter/static/Inter-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url('../assets/fonts/Inter/static/Inter-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Inter-ExtraBold';
+  src: url('../assets/fonts/Inter/static/Inter-ExtraBold.ttf');
+}
+
+.container {
+  padding: 150px 0;
+  min-height: calc(100vh - 778px);
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    min-height: calc(100vh - 357px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 150px 20px;
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    min-height: calc(100vh - 194px);
+    padding: 100px 20px 50px;
+  }
+
+  .mobile-menu {
+    top: 75px;
+  }
+}

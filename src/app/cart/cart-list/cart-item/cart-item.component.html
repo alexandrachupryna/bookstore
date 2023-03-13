@@ -1,0 +1,17 @@
+<div class="cart-item__image">
+  <img [src]="cart.book.imagePath" alt="">
+</div>
+<div class="cart-item__data">
+  <p class="cart-item__data-name">{{cart.book.name}}</p>
+  <p class="cart-item__data-author">{{cart.book.author}}</p>
+  <div class="cart-item__row">
+    <p class="cart-item__data-format">{{cart.format}}</p>
+    <p class="cart-item__data-price">${{cart.price}}</p>
+  </div>
+  <a class="cart-item__remove" (click)="onRemove()">Remove</a>
+</div>
+<div class="cart-item__amount">
+  <button class="cart-item__button" (click)="onReduceCart()">-</button>
+  <p class="cart-item__amount">{{cart.amount}}</p>
+  <button class="cart-item__button" (click)="onAddCart()">+</button>
+</div>

@@ -1,0 +1,15 @@
+p {
+  font-family: 'Inter-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #969AA0;
+}
+
+@media screen and (max-width: 550px) {
+  p {
+    font-size: 16px;
+  }
+}

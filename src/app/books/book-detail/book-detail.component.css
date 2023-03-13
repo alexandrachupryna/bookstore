@@ -1,0 +1,146 @@
+.book-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-detail__image {
+  padding: 5%;
+  margin-right: 5%;
+  background-color: #F5F8FC;
+}
+
+.book-detail__image img {
+  width: 100%;
+}
+
+.book-detail__title {
+  font-family: 'Cardo-Bold';
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: -0.015em;
+  color: #1B3764;
+}
+
+.book-detail__author {
+  color: #969AA0;
+  font-family: 'Inter-Regular';
+  font-size: 24px;
+}
+
+.book-detail__price {
+  font-family: 'Inter-ExtraBold';
+  font-size: 30px;
+  line-height: 170%;
+  letter-spacing: -0.01em;
+  color: #FFCA42;
+}
+
+.book-detail__button {
+  background: #FFCA42;
+  padding: 20px;
+  width: auto;
+  height: 65px;
+  font-family: 'Cardo-Bold';
+  font-size: 19px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #1B3764;
+}
+
+.book-detail__button-select {
+  margin-bottom: 20px;
+}
+
+.book-detail__button:focus {
+  outline: none;
+}
+
+.dropdown-menu {
+  top: calc(100% - 20px);
+}
+
+p {
+  font-family: 'Inter-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #969AA0;
+}
+
+.book-detail__wrap {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 14px;
+}
+
+.book-detail__input {
+  margin-right: 10px;
+  width: 120px;
+  height: 65px;
+  border: 1px solid #FFCA42;
+  font-family: 'Inter-Medium';
+  font-size: 20px;
+  line-height: 140%;
+  color: #969AA0;
+  text-align: center;
+}
+
+.book-detail__input:focus {
+  outline: none;
+}
+
+.book-detail__form {
+  margin-top: 20px;
+  display: flex;
+}
+
+.book-detail__button-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.book-detail__button-add svg {
+  margin-right: 12px;
+}
+
+@media screen and (max-width: 766px) {
+  .book-detail {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .book-detail {
+    margin: 0 -15px;
+  }
+
+  .book-detail__title {
+    font-size: 24px;
+  }
+
+  .book-detail__author {
+    font-size: 20px;
+  }
+
+  .book-detail__price {
+    font-size: 24px;
+  }
+
+  .book-detail__button {
+    font-size: 15px;
+    height: 50px;
+    padding: 16px 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .book-detail__input {
+    height: 50px;
+  }
+}

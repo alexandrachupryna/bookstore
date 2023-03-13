@@ -1,0 +1,41 @@
+.pange-not-found {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 589px;
+}
+
+img {
+  margin-bottom: 35px;
+}
+
+h1 {
+  font-family: 'Cardo-Bold';
+  font-size: 40px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #1B3764;
+}
+
+p {
+  margin-bottom: 40px;
+  font-family: 'Inter-Regular';
+  font-size: 19px;
+  line-height: 170%;
+  letter-spacing: -0.01em;
+  color: #969AA0;
+}
+
+.btn {
+  padding: 20px 40px;
+  background: #FFCA42;
+  font-family: 'Cardo-Bold';
+  font-size: 19px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  color: #1B3764;
+}
+
+.btn:focus {
+  outline: none;
+}

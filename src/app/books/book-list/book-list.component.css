@@ -1,0 +1,83 @@
+.book-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+
+.book-filter {
+  margin-right: 15px;
+}
+
+.btn-filter {
+  border: 1px solid #FFCA42;
+  background-color: #FFFFFF;
+  padding: 20px;
+  width: auto;
+  font-family: 'Cardo-Bold';
+  font-size: 19px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #1B3764;
+}
+
+.btn-filter__active {
+  background-color: #FFCA42;
+}
+
+.btn-filter:focus {
+  outline: none;
+}
+
+.book-filter__wrapper {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.btn-pagination {
+  margin: 20px auto 0;
+  display: block;
+  padding: 20px;
+  background: #FFCA42;
+  font-family: 'Cardo-Bold';
+  font-size: 19px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  color: #1B3764;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .book-list {
+    grid-template-columns: auto auto;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .book-filter__wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .book-list {
+    grid-template-columns: auto;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .btn-filter {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .book-filter__wrapper {
+    margin-bottom: 20px;
+  }
+}
